@@ -1,15 +1,21 @@
 body {
   box-sizing: border-box;
   font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw
 }
 
 .nav-center {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: aliceblue;
   padding: 20px 30px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-header {
@@ -17,6 +23,7 @@ body {
   display: flex;
   padding: 0 40px;
   justify-content: space-between;
+ box-sizing: border-box;
 }
 
 .links, .social-icons {
@@ -24,19 +31,36 @@ body {
   margin-top: 0;
   list-style-type: none;
   display: flex;
+  gap: 4px;
+  box-sizing: border-box;
+  align-items: center;
 }
 
 li {
   padding: 5px;
 }
 
+li:hover {
+  background-color: rgba(0, 140, 255, 0.801);
+  width: 100%;
+  font-size:large;
+  display: block
+}
 a {
   text-decoration: none;
 }
 
 .nav-toggle {
   display: none;
+  background-color: transparent;
+  color: brown;
 }
+
+.nav-toggle:hover{
+  transform:rotate(90deg);
+
+}
+
 .show-links {
   height: 20px;
 }
@@ -51,6 +75,7 @@ a {
     display: flex;
     margin: auto;
     height: 60px;
+    margin-left: 0;
   }
 
   .logo {
@@ -60,13 +85,16 @@ a {
   .links {
     flex-direction: column;
     display: none;
+    flex: 0.5;
+    margin-left: 0;
   }
+
   .social-icons {
     display: none;
   }
 
   .nav-toggle {
-    display: initial;
+    display: block;
   }
 
   .show-links {
